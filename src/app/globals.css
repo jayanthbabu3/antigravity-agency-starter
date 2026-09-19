@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas: #08090A;
+    --surface: #101216;
+    --surface-elevated: #161920;
+    --text-primary: #F2F4F7;
+    --text-secondary: #858994;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.18);
+    --accent: #00E5FF;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  /* Single-Font Headings Rule (Strict Global Requirement) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline, sans-serif);
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
